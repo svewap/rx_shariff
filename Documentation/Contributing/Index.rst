@@ -4,13 +4,6 @@
 Support and Contributing
 ========================
 
-
-Known issues
-------------
-
-None, at the moment.
-
-
 Translations
 ------------
 
@@ -36,7 +29,7 @@ Bug reports
 
 Please get in touch first if you think you found a bug, so we can check together.
 
-The issue tracker can be found at https://forge.typo3.org/projects/extension-rx_shariff
+The issue tracker can be found at https://bitbucket.org/reelworx/rx_shariff/issues
 
 
 Coding
@@ -44,8 +37,8 @@ Coding
 
 Contributions and ideas are very welcome.
 
-The contribution workflow follows the Core rules and therefore uses Gerrit: https://review.typo3.org/
+The contribution workflow follows the Core rules. This means to use proper commit message formatting as
+described in https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/Appendix/GeneralTopics/CommitMessage.html
+and to stick to the coding guidelines currently applicable to Core development.
 
-Git repository: https://git.typo3.org/TYPO3CMS/Extensions/rx_shariff.git
-
-To clone your copy consider using the awesome Gerrit-Git-Helper: http://www.wwwision.de/githelper/#TYPO3CMS/Extensions/rx_shariff.git
+Git repository: https://bitbucket.org/reelworx/rx_shariff.git
