@@ -1,0 +1,18 @@
+
+tt_content.list.20.rxshariff_shariff {
+    settings {
+        enableBackend = 1
+        data {
+            lang = en
+            mail-body =
+            mail-subject =
+            mail-url = mailto:
+            media-url =
+            orientation = horizontal
+            referrer-track =
+            services =
+            theme = standard
+            twitter-via =
+        }
+    }
+}

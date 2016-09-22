@@ -2,21 +2,26 @@
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'rx_shariff',
-    'Configuration/TypoScript/WithJQuery',
-    'Shariff: Include Shariff and jQuery'
-);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    'rx_shariff',
-    'Configuration/TypoScript/WithJQueryAndFontawesome',
-    'Shariff: Include Shariff, font-awesome and jQuery'
+    'Configuration/TypoScript/PluginOnly',
+    'Shariff: Plugin settings only'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'rx_shariff',
     'Configuration/TypoScript/WithoutJQuery',
-    'Shariff: Include Shariff without jQuery'
+    'Shariff: Plugin settings, FE styles only'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'rx_shariff',
+    'Configuration/TypoScript/WithJQuery',
+    'Shariff: Plugin settings, FE styles and jQuery'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'rx_shariff',
+    'Configuration/TypoScript/WithJQueryAndFontawesome',
+    'Shariff: Plugin settings, FE styles incl. Font-Awesome and jQuery'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'rx_shariff',
     'Configuration/TypoScript/WithoutJQueryAndFontawesome',
-    'Shariff: Include Shariff, font-awesome without jQuery'
+    'Shariff: Plugin settings, FE styles incl. Font-Awesome but no jQuery'
 );
