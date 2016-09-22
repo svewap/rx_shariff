@@ -113,3 +113,43 @@ Finding the logs
 
 The extension uses the TYPO3 logging facility to log warnings when fetching counts from the various social media platforms.
 If you encounter problems, take a look into the logs.
+
+
+Predefining plugin options
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It may be your requirement to have some of the options the plugin is providing predefined and hidden from the user.
+This is easily doable by changing the default value for those options with TypoScript.
+
+The default settings provided by the extension are:
+
+.. code-block:: typoscript
+
+   tt_content.list.20.rxshariff_shariff {
+      settings {
+         enableBackend = 1
+         data {
+            lang = en
+            mail-body =
+            mail-subject =
+            mail-url = mailto:
+            media-url = null
+            orientation = horizontal
+            referrer-track = null
+            services =
+            theme = standard
+            twitter-via = null
+         }
+      }
+   }
+
+
+Override those settings for your needs and hide the fields in the plugin configuration accordingly.
+Use default ``TCEFORM`` page TSconfig settings to achieve this. Take a look into the :ref:`TSconfig reference <t3tsconfig:tceform>`.
+
+
+.. code-block:: typoscript
+
+   TCEFORM.tt_content.pi_flexform.rxshariff_shariff.sDEF.settings\.enableBackend.disabled = 1
+   TCEFORM.tt_content.pi_flexform.rxshariff_shariff.services.disabled = 1
+
