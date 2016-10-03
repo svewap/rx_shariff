@@ -36,7 +36,7 @@ The templates including jQuery are including the jQuery version shipped TYPO3 CM
 
 .. hint::
 
-   Include the first template if you want to integrate the Javascript and CSS in your asset workflow (e.g. gulp or grunt)
+   Include the first template if you want to integrate the Javascript and CSS in your asset workflow (e.g. gulp or grunt) directly.
 
 
 Frontend usage
@@ -82,12 +82,11 @@ More example usages can be found here: http://heiseonline.github.io/shariff/
 Pure TypoScript
 ^^^^^^^^^^^^^^^
 
-The plugin can also be rendered via TypoScript the usual way. All settings available in TypoScript as well.
+The plugin can also be rendered via TypoScript the usual way. All settings are available in TypoScript as well.
 
 .. code-block:: typoscript
 
    page.20 < tt_content.list.20.rxshariff_shariff
-
 
 The various settings are listed below.
 
