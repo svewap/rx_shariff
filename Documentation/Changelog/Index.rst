@@ -4,6 +4,15 @@
 Change Log
 ==========
 
+Version 9.0.0
+-------------
+
+* BREAKING: The static templates have been renamed and need to be re-included.
+  Moreover, including a static template is now mandatory.
+* Feature: The plugin options can be defiend via TypoScript now.
+* Documentation has been updated to the new rendering style.
+
+
 Version 8.0.0
 -------------
 

@@ -1,3 +1,5 @@
+<INCLUDE_TYPOSCRIPT: source="EXT:rx_shariff/Configuration/TypoScript/PluginOnly/setup.ts">
+
 # =============================
 # Load jQuery and Shariff files
 # =============================
