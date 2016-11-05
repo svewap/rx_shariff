@@ -4,7 +4,7 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'Heise Shariff',
     'description' => 'Shariff implementation for TYPO3 CMS including the backend module, a viewhelper and a plugin.',
     'category' => 'plugin',
-    'version' => '9.0.0',
+    'version' => '9.0.1',
     'state' => 'stable',
     'uploadfolder' => false,
     'author' => 'Markus Klein',
@@ -13,7 +13,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'php' => '5.6.0-7.1.99',
-            'typo3' => '6.2.9-8.99.99',
+            'typo3' => '6.2.9-8.5.99',
         ],
         'conflicts' => [],
         'suggests' => []
