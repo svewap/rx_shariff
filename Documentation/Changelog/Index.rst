@@ -4,6 +4,14 @@
 Change Log
 ==========
 
+Version 9.0.1
+-------------
+
+* The cache for share counts now uses the correct cache backend,
+  so entries are expired correctly now.
+* Documentation fixes
+
+
 Version 9.0.0
 -------------
 
