@@ -97,6 +97,12 @@ class Shariff
                 'ttl' => (int)$extensionConfiguration['ttl'],
             ],
         ];
+        if ($GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_host']) {
+            $configuration['client']['proxy'] = 'tcp://' . $GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_host'];
+            if ($GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_port']) {
+               $configuration['client']['proxy'] .= ':' . $GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_port'];
+            }
+        }
         $facebookKey = array_search('Facebook', $configuration['services'], true);
         if ($facebookKey !== false) {
             if (empty($extensionConfiguration['facebook_app_id']) || empty($extensionConfiguration['facebook_secret'])) {
