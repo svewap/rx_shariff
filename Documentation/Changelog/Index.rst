@@ -4,9 +4,12 @@
 Change Log
 ==========
 
-Version 9.1.0
--------------
+Version 10.0.0
+--------------
 
+* BREAKING: The Facebook backend now always needs an app id and an API secret
+  the former FQL mode has been removed.
+* Updated shariff-backend to version 7.0.0
 * Updated shariff to version 1.24.1
 
 
