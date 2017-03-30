@@ -4,10 +4,10 @@
 
 ---
 conf.py:
-  copyright: 2015-2016
+  copyright: 2015-2017
   project: Heise Shariff
-  version: 9.0
-  release: 9.0.1
+  version: 10.0
+  release: 10.0.0
   latex_documents:
   - - Index
     - rx_shariff.tex
