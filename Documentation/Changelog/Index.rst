@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 9.1.0
+-------------
+
+* Updated shariff to version 1.24.1
+
+
 Version 9.0.1
 -------------
 
