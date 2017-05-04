@@ -7,7 +7,7 @@ Change Log
 Version 10.0.1
 --------------
 
-* Fix Fluid template to work in TYPO3 6.2 as well
+* Fixed Fluid template to work in TYPO3 6.2 as well
 
 
 Version 10.0.0
