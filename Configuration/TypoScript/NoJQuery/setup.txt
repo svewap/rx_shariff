@@ -1,0 +1,8 @@
+<INCLUDE_TYPOSCRIPT: source="EXT:rx_shariff/Configuration/TypoScript/PluginOnly/setup.ts">
+
+# ==================
+# Load Shariff files
+# ==================
+
+page.includeJSFooter.tx_rxshariff_shariff = EXT:rx_shariff/Resources/Public/JavaScript/shariff.complete.js
+page.includeCSS.tx_rxshariff_shariff = EXT:rx_shariff/Resources/Public/Css/shariff.min.css

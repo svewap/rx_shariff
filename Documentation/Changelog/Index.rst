@@ -4,6 +4,14 @@
 Change Log
 ==========
 
+Version 10.1.0
+--------------
+
+* Updated shariff to version 1.25.2
+  Added new static templates to include the new complete-JS of Shariff,
+  which does not depend on jQuery anymore.
+
+
 Version 10.0.1
 --------------
 
