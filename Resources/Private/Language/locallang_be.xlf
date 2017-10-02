@@ -16,6 +16,9 @@
 		<trans-unit id="flexforms_general.flattr.user">
 			<source>Flattr user</source>
 		</trans-unit>
+		<trans-unit id="flexforms_general.lang">
+			<source>Language (ISO-2 code or 'auto')</source>
+		</trans-unit>
 		<trans-unit id="flexforms_general.mail.mail-body">
 			<source>Bodytext (empty for auto generated content)</source>
 		</trans-unit>

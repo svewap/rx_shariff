@@ -122,7 +122,7 @@ The default settings provided by the extension are:
       settings {
          enableBackend = 1
          data {
-            lang = en
+            lang = auto
             mail-body =
             mail-subject =
             mail-url = mailto:

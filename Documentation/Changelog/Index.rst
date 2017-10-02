@@ -4,6 +4,15 @@
 Change Log
 ==========
 
+
+Version 10.2.0
+--------------
+
+* Allow explicit definition of language via plugin or TypoScript again.
+  This may cause unexpected language selection in FE when a plugin was
+  created before version 7.3.0 because these plugins may still have a language set.
+
+
 Version 10.1.0
 --------------
 
