@@ -6,8 +6,8 @@
 conf.py:
   copyright: 2015-2017
   project: Heise Shariff
-  version: 10.1
-  release: 10.1.0
+  version: 10.2
+  release: 10.2.0
   latex_documents:
   - - Index
     - rx_shariff.tex
