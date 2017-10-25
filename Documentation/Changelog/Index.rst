@@ -8,6 +8,8 @@ Change Log
 Version 10.2.0
 --------------
 
+* Updated shariff to version 2.0.1
+  This fixes IE issues
 * Allow explicit definition of language via plugin or TypoScript again.
   This may cause unexpected language selection in FE when a plugin was
   created before version 7.3.0 because these plugins may still have a language set.
