@@ -4,6 +4,11 @@
 Change Log
 ==========
 
+Version 10.2.1
+--------------
+
+* Updated shariff-backend to version 7.0.1
+
 
 Version 10.2.0
 --------------
