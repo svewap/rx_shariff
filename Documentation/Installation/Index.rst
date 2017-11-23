@@ -53,7 +53,7 @@ This is the easiest way to use Shariff.
 Simply add a new content element to a page and select the "Shariff Social Icons" plugin.
 All configuration options can be adjusted as needed.
 
-This is especially useful for editors, which should be able to put the Shariff buttons on arbitrary places on the site.
+This is especially useful for editors, who should be able to put the Shariff buttons on arbitrary places on the site.
 
 
 Fluid view helper
