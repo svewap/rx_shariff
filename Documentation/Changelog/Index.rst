@@ -4,7 +4,7 @@
 Change Log
 ==========
 
-Version
+Version 10.3.0
 --------------
 
 * Updated shariff to version 2.1.2
@@ -12,7 +12,9 @@ Version
    - Added Telegram service
    - Improved security of links with target="_blank"
    - Fixed SEO friendliness by adding rel="nofollow" to all button links
-
+* Updated shariff-backend to version 7.1.0
+   - Added support for Vk
+   - Updated Facebook Graph API to version 2.11
 
 Version 10.2.1
 --------------
