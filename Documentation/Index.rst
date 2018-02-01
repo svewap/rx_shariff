@@ -23,7 +23,7 @@ Heise Shariff
 		scripts as well as the PHP data backend to retrieve social media stats.
 
 	:Keywords:
-		Social Media, JavaScript, GooglePlus, Twitter, Facebook, LinkedIn, Reddit, StumbleUpon, Flattr, Pinterest, Xing
+		Social Media, JavaScript, AddThis, diaspora, facebook, Flattr, Google+, LinkedIn, Mail, Pinterest, Print, Qzone, reddit, StumbleUpon, Telegram, Tencent Weibo, Threema, Tumblr, Twitter, VK, Weibo, WhatsApp, XING
 
 	:Copyright:
 		Reelworx GmbH

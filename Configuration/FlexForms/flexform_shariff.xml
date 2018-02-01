@@ -181,6 +181,36 @@
 										<numIndex index="1">threema</numIndex>
 									</numIndex>
 									<numIndex index="15" type="array">
+										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.vk
+										</numIndex>
+										<numIndex index="1">vk</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.telegram
+										</numIndex>
+										<numIndex index="1">telegram</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.print
+										</numIndex>
+										<numIndex index="1">print</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.qzone
+										</numIndex>
+										<numIndex index="1">qzone</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.tencent-weibo
+										</numIndex>
+										<numIndex index="1">tencent-weibo</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.weibo
+										</numIndex>
+										<numIndex index="1">weibo</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
 										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.info
 										</numIndex>
 										<numIndex index="1">info</numIndex>

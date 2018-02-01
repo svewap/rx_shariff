@@ -4,6 +4,16 @@
 Change Log
 ==========
 
+Version
+--------------
+
+* Updated shariff to version 2.1.2
+   - Added VK service
+   - Added Telegram service
+   - Improved security of links with target="_blank"
+   - Fixed SEO friendliness by adding rel="nofollow" to all button links
+
+
 Version 10.2.1
 --------------
 
