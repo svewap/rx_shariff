@@ -7,6 +7,9 @@ Change Log
 Version 10.3.1
 --------------
 
+* Updated shariff to version 2.1.3
+   - Updated translations
+   - Some bugfixes
 * Updated shariff-backend to version 7.1.1
    - Removed GooglePlus support
    - Updated Facebook Graph API to version 2.12
