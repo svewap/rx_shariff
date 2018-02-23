@@ -4,6 +4,14 @@
 Change Log
 ==========
 
+Version 10.3.1
+--------------
+
+* Updated shariff-backend to version 7.1.1
+   - Removed GooglePlus support
+   - Updated Facebook Graph API to version 2.12
+
+
 Version 10.3.0
 --------------
 
@@ -15,6 +23,7 @@ Version 10.3.0
 * Updated shariff-backend to version 7.1.0
    - Added support for Vk
    - Updated Facebook Graph API to version 2.11
+
 
 Version 10.2.1
 --------------

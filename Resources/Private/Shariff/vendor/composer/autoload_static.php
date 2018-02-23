@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit5472e15398698342f2be5a90b453ed5f
 {
     public static $files = array (
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
@@ -129,7 +129,6 @@ class ComposerStaticInit5472e15398698342f2be5a90b453ed5f
         'Heise\\Shariff\\Backend\\BackendManager' => __DIR__ . '/../..' . '/src/Backend/BackendManager.php',
         'Heise\\Shariff\\Backend\\Facebook' => __DIR__ . '/../..' . '/src/Backend/Facebook.php',
         'Heise\\Shariff\\Backend\\Flattr' => __DIR__ . '/../..' . '/src/Backend/Flattr.php',
-        'Heise\\Shariff\\Backend\\GooglePlus' => __DIR__ . '/../..' . '/src/Backend/GooglePlus.php',
         'Heise\\Shariff\\Backend\\LinkedIn' => __DIR__ . '/../..' . '/src/Backend/LinkedIn.php',
         'Heise\\Shariff\\Backend\\Pinterest' => __DIR__ . '/../..' . '/src/Backend/Pinterest.php',
         'Heise\\Shariff\\Backend\\Reddit' => __DIR__ . '/../..' . '/src/Backend/Reddit.php',
@@ -137,6 +136,7 @@ class ComposerStaticInit5472e15398698342f2be5a90b453ed5f
         'Heise\\Shariff\\Backend\\ServiceFactory' => __DIR__ . '/../..' . '/src/Backend/ServiceFactory.php',
         'Heise\\Shariff\\Backend\\ServiceInterface' => __DIR__ . '/../..' . '/src/Backend/ServiceInterface.php',
         'Heise\\Shariff\\Backend\\StumbleUpon' => __DIR__ . '/../..' . '/src/Backend/StumbleUpon.php',
+        'Heise\\Shariff\\Backend\\Vk' => __DIR__ . '/../..' . '/src/Backend/Vk.php',
         'Heise\\Shariff\\Backend\\Xing' => __DIR__ . '/../..' . '/src/Backend/Xing.php',
         'Heise\\Shariff\\CacheInterface' => __DIR__ . '/../..' . '/src/CacheInterface.php',
         'Heise\\Shariff\\ZendCache' => __DIR__ . '/../..' . '/src/ZendCache.php',
