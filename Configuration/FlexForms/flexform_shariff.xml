@@ -336,7 +336,7 @@
 							<config>
 								<type>input</type>
 								<size>20</size>
-								<placeholder>mailto:</placeholder>
+								<default>mailto:</default>
 							</config>
 						</TCEforms>
 					</settings.data.mail-url>
