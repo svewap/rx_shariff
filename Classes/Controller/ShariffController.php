@@ -38,9 +38,6 @@ class ShariffController extends ActionController
         if (isset($data['lang']) && $data['lang'] === 'auto') {
             unset($data['lang']);
         }
-        if (isset($data['mail-url']) && $data['mail-url'] === 'mailto:') {
-            unset($data['mail-url']);
-        }
         foreach ($data as $key => $value) {
             if (trim($value) === '') {
                 unset($data[$key]);
