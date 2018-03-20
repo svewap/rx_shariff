@@ -4,6 +4,14 @@
 Change Log
 ==========
 
+Version 10.3.2
+--------------
+
+* ATTENTION: This is the last release with TYPO3 6.2 support
+* PHP 7.2 support
+* Fixed default value for mail-url
+
+
 Version 10.3.1
 --------------
 
