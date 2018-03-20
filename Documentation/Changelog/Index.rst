@@ -4,6 +4,13 @@
 Change Log
 ==========
 
+Version 11.0.0
+--------------
+
+* Dropped support for PHP < 7.0 and for TYPO3 v6.2
+* Uses guzzle from core
+
+
 Version 10.3.2
 --------------
 

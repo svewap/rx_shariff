@@ -12,8 +12,6 @@
 
 namespace Reelworx\RxShariff;
 
-require_once __DIR__ . '/../Resources/Private/Shariff/vendor/autoload.php';
-
 use Heise\Shariff\Backend;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -43,16 +41,6 @@ class Shariff
         $response = $response->withHeader('Content-type', 'application/json');
         $response->getBody()->write(json_encode($this->render($url)));
         return $response;
-    }
-
-    /**
-     * Legacy request handling with direct access to GET parameters
-     */
-    public function processRequestLegacy() {
-        $url = !empty($_GET['url']) ? $_GET['url'] : (string)$_SERVER['HTTP_REFERER'];
-
-        header('Content-type: application/json');
-        echo json_encode($this->render($url));
     }
 
     /**

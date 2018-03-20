@@ -70,7 +70,7 @@ For developers a convenient view helper is available to integrate Shariff into y
 
 **Optionally you can define all data attributes available for Shariff.**
 
-For your comfort the language for Shariff is automatically determined from your curernt page language.
+For your comfort the language for Shariff is automatically determined from your current page language.
 
 More example usages can be found here: http://heiseonline.github.io/shariff/
 
