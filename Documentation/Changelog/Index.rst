@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 10.3.3
+--------------
+
+SECURITY release
+Fixes XSS issue with Twitter share button
+
 Version 10.3.2
 --------------
 
