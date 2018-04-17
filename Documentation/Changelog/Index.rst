@@ -9,6 +9,11 @@ Version 11.0.0
 
 * Dropped support for PHP < 7.0 and for TYPO3 v6.2
 * Uses guzzle from core
+* Updated shariff to version 3.0.1
+   - XSS security fix
+   - Uses Font Awesome 5 now
+   - Bootstrap 4 compatibility
+   - New option data-button-style
 
 
 Version 10.3.2
