@@ -20,7 +20,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Reelworx\\RxShariff\\": "Classes/"
+			"Reelworx\\RxShariff\\": "Classes/",
+			"Heise\\Shariff\\": "Resources/Private/Shariff/src/"
 		}
 	}
 }

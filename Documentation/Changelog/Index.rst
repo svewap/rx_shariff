@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 11.0.1
+--------------
+
+* Added Heise namespaces to composer.json
+
+
 Version 11.0.0
 --------------
 
