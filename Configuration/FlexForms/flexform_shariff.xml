@@ -103,7 +103,7 @@
 								<type>select</type>
 								<renderType>selectMultipleSideBySide</renderType>
 								<size>17</size>
-								<maxitems>16</maxitems>
+								<maxitems>99</maxitems>
 								<items>
 									<numIndex index="0" type="array">
 										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.twitter
