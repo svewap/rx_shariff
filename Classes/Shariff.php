@@ -12,6 +12,10 @@
 
 namespace Reelworx\RxShariff;
 
+if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_branch) < \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger('8.1')) {
+    require_once __DIR__ . '/../Resources/Private/Shariff/vendor/autoload.php';
+}
+
 use Heise\Shariff\Backend;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
