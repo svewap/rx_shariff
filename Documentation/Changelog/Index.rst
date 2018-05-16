@@ -4,6 +4,13 @@
 Change Log
 ==========
 
+Version 11.0.2
+--------------
+
+* Add Guzzle library again for TYPO3 v7
+* Allow selection of all services in plugin
+
+
 Version 11.0.1
 --------------
 
