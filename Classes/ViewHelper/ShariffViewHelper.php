@@ -14,6 +14,7 @@ namespace Reelworx\RxShariff\ViewHelper;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\VersionNumberUtility;
+use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
@@ -77,9 +78,17 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
     public function render()
     {
         if ($this->arguments['enableBackend']) {
-            $url = $this->controllerContext->getUriBuilder()->reset()->setUseCacheHash(false)
-                                           ->setArguments(['eID' => 'shariff'])->buildFrontendUri();
-            $this->tag->addAttribute('data-backend-url', $url);
+            $controllerContext = null;
+            if (isset($this->controllerContext)) {
+                $controllerContext = $this->controllerContext;
+            } elseif ($this->renderingContext instanceof RenderingContext) {
+                $controllerContext = $this->renderingContext->getControllerContext();
+            }
+            if ($controllerContext) {
+                $url = $controllerContext->getUriBuilder()->reset()->setUseCacheHash(false)
+                                         ->setArguments(['eID' => 'shariff'])->buildFrontendUri();
+                $this->tag->addAttribute('data-backend-url', $url);
+            }
         }
 
         $services = $this->arguments['services'];

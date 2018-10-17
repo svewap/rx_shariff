@@ -17,8 +17,8 @@ if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(
 }
 
 use Heise\Shariff\Backend;
-use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Http\Response;
 use TYPO3\CMS\Core\Log\LogManager;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -33,10 +33,10 @@ class Shariff
      * Process request
      *
      * @param ServerRequestInterface $request
-     * @param ResponseInterface $response
-     * @return null|ResponseInterface
+     * @param Response $response
+     * @return null|Response
      */
-    public function processRequest(ServerRequestInterface $request, ResponseInterface $response)
+    public function processRequest(ServerRequestInterface $request, Response $response)
     {
         $url = !empty($request->getQueryParams()['url'])
             ? $request->getQueryParams()['url']
