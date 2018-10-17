@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 11.1.0
+--------------
+
+* Update extension for TYPO3 version 9 LTS
+
+
 Version 11.0.2
 --------------
 
