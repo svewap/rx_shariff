@@ -4,6 +4,17 @@
 Change Log
 ==========
 
+Version 12.0.0
+--------------
+
+* Updated shariff to version 3.1.1
+   - Added Pocket service
+   - Removed Google+ service
+* Updated shariff-backend to version 8.0.0
+* Dropped support for PHP 7.0
+* Added PHP 7.3 support
+
+
 Version 11.1.0
 --------------
 
