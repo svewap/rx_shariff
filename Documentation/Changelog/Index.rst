@@ -4,6 +4,18 @@
 Change Log
 ==========
 
+Version 12.1.0
+--------------
+
+* Updated shariff to version 3.2.1
+   - Added buffer service
+   - Font Awesome to version 5.8.1
+   - Updated XING share URL
+   - More translations
+* Updated shariff-backend to version 8.1.1
+   - Added buffer service
+
+
 Version 12.0.0
 --------------
 
