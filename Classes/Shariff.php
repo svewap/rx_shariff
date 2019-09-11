@@ -36,12 +36,15 @@ class Shariff
      * @param Response $response
      * @return null|Response
      */
-    public function processRequest(ServerRequestInterface $request, Response $response)
+    public function processRequest(ServerRequestInterface $request, Response $response = null)
     {
         $url = !empty($request->getQueryParams()['url'])
             ? $request->getQueryParams()['url']
             : (string)$_SERVER['HTTP_REFERER'];
 
+        if (!$response) {
+            $response = GeneralUtility::makeInstance(Response::class);
+        }
         $response = $response->withHeader('Content-type', 'application/json');
         $response->getBody()->write(json_encode($this->render($url)));
         return $response;
