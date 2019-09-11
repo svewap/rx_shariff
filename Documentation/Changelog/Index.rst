@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 12.1.1
+--------------
+
+* Bugfix for simplifiedControllerActionDispatching (TYPO3 v9)
+
+
 Version 12.1.0
 --------------
 
