@@ -129,7 +129,6 @@ class ComposerStaticInit5472e15398698342f2be5a90b453ed5f
         'Heise\\Shariff\\Backend\\Buffer' => __DIR__ . '/../..' . '/src/Backend/Buffer.php',
         'Heise\\Shariff\\Backend\\Facebook' => __DIR__ . '/../..' . '/src/Backend/Facebook.php',
         'Heise\\Shariff\\Backend\\Flattr' => __DIR__ . '/../..' . '/src/Backend/Flattr.php',
-        'Heise\\Shariff\\Backend\\LinkedIn' => __DIR__ . '/../..' . '/src/Backend/LinkedIn.php',
         'Heise\\Shariff\\Backend\\Pinterest' => __DIR__ . '/../..' . '/src/Backend/Pinterest.php',
         'Heise\\Shariff\\Backend\\Reddit' => __DIR__ . '/../..' . '/src/Backend/Reddit.php',
         'Heise\\Shariff\\Backend\\Request' => __DIR__ . '/../..' . '/src/Backend/Request.php',

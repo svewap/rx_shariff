@@ -4,6 +4,13 @@
 Change Log
 ==========
 
+Version 12.2.0
+--------------
+
+* Updated shariff-backend to version 8.2.1
+   - Removed LinkedIn service
+
+
 Version 12.1.1
 --------------
 
