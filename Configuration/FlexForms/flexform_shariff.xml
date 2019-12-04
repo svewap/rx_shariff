@@ -115,11 +115,6 @@
 										</numIndex>
 										<numIndex index="1">facebook</numIndex>
 									</numIndex>
-									<numIndex index="2" type="array">
-										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.googleplus
-										</numIndex>
-										<numIndex index="1">googleplus</numIndex>
-									</numIndex>
 									<numIndex index="3" type="array">
 										<numIndex index="0">LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:flexforms_general.services.linkedin
 										</numIndex>

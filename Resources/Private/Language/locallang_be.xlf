@@ -55,9 +55,6 @@
 			<trans-unit id="flexforms_general.services.flattr" resname="flexforms_general.services.flattr">
 				<source>Flattr</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.googleplus" resname="flexforms_general.services.googleplus">
-				<source>Google+</source>
-			</trans-unit>
 			<trans-unit id="flexforms_general.services.info" resname="flexforms_general.services.info">
 				<source>Info</source>
 			</trans-unit>

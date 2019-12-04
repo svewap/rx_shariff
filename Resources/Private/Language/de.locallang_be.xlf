@@ -72,10 +72,6 @@
 				<source>Flattr</source>
 				<target>Flattr</target>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.googleplus" resname="flexforms_general.services.googleplus">
-				<source>Google+</source>
-				<target>Google+</target>
-			</trans-unit>
 			<trans-unit id="flexforms_general.services.info" resname="flexforms_general.services.info">
 				<source>Info</source>
 				<target>Info</target>
