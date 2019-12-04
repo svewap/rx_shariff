@@ -43,67 +43,67 @@
 			<trans-unit id="flexforms_general.services" resname="flexforms_general.services">
 				<source>Services</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.addthis" resname="flexforms_general.services.addthis">
+			<trans-unit id="flexforms_general.services.addthis" resname="flexforms_general.services.addthis" translate="no">
 				<source>AddThis</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.diaspora" resname="flexforms_general.services.diaspora">
+			<trans-unit id="flexforms_general.services.diaspora" resname="flexforms_general.services.diaspora" translate="no">
 				<source>Diaspora</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.facebook" resname="flexforms_general.services.facebook">
+			<trans-unit id="flexforms_general.services.facebook" resname="flexforms_general.services.facebook" translate="no">
 				<source>Facebook</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.flattr" resname="flexforms_general.services.flattr">
+			<trans-unit id="flexforms_general.services.flattr" resname="flexforms_general.services.flattr" translate="no">
 				<source>Flattr</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.info" resname="flexforms_general.services.info">
+			<trans-unit id="flexforms_general.services.info" resname="flexforms_general.services.info" translate="no">
 				<source>Info</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.linkedin" resname="flexforms_general.services.linkedin">
+			<trans-unit id="flexforms_general.services.linkedin" resname="flexforms_general.services.linkedin" translate="no">
 				<source>LinkedIn</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.mail" resname="flexforms_general.services.mail">
+			<trans-unit id="flexforms_general.services.mail" resname="flexforms_general.services.mail" translate="no">
 				<source>Mail</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.pinterest" resname="flexforms_general.services.pinterest">
+			<trans-unit id="flexforms_general.services.pinterest" resname="flexforms_general.services.pinterest" translate="no">
 				<source>Pinterest</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.print" resname="flexforms_general.services.print">
+			<trans-unit id="flexforms_general.services.print" resname="flexforms_general.services.print" translate="no">
 				<source>Print</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.qzone" resname="flexforms_general.services.qzone">
+			<trans-unit id="flexforms_general.services.qzone" resname="flexforms_general.services.qzone" translate="no">
 				<source>Qzone</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.reddit" resname="flexforms_general.services.reddit">
+			<trans-unit id="flexforms_general.services.reddit" resname="flexforms_general.services.reddit" translate="no">
 				<source>Reddit</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.stumbleupon" resname="flexforms_general.services.stumbleupon">
+			<trans-unit id="flexforms_general.services.stumbleupon" resname="flexforms_general.services.stumbleupon" translate="no">
 				<source>StumbleUpon</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.telegram" resname="flexforms_general.services.telegram">
+			<trans-unit id="flexforms_general.services.telegram" resname="flexforms_general.services.telegram" translate="no">
 				<source>Telegram</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.tencent-weibo" resname="flexforms_general.services.tencent-weibo">
+			<trans-unit id="flexforms_general.services.tencent-weibo" resname="flexforms_general.services.tencent-weibo" translate="no">
 				<source>Tencent-Weibo</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.threema" resname="flexforms_general.services.threema">
+			<trans-unit id="flexforms_general.services.threema" resname="flexforms_general.services.threema" translate="no">
 				<source>Threema</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.tumblr" resname="flexforms_general.services.tumblr">
+			<trans-unit id="flexforms_general.services.tumblr" resname="flexforms_general.services.tumblr" translate="no">
 				<source>Tumblr</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.twitter" resname="flexforms_general.services.twitter">
+			<trans-unit id="flexforms_general.services.twitter" resname="flexforms_general.services.twitter" translate="no">
 				<source>Twitter</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.vk" resname="flexforms_general.services.vk">
+			<trans-unit id="flexforms_general.services.vk" resname="flexforms_general.services.vk" translate="no">
 				<source>Vk</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.weibo" resname="flexforms_general.services.weibo">
+			<trans-unit id="flexforms_general.services.weibo" resname="flexforms_general.services.weibo" translate="no">
 				<source>Weibo</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.whatsapp" resname="flexforms_general.services.whatsapp">
+			<trans-unit id="flexforms_general.services.whatsapp" resname="flexforms_general.services.whatsapp" translate="no">
 				<source>WhatsApp</source>
 			</trans-unit>
-			<trans-unit id="flexforms_general.services.xing" resname="flexforms_general.services.xing">
+			<trans-unit id="flexforms_general.services.xing" resname="flexforms_general.services.xing" translate="no">
 				<source>XING</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.theme" resname="flexforms_general.theme">
@@ -127,13 +127,13 @@
 			<trans-unit id="flexforms_general.url" resname="flexforms_general.url">
 				<source>The canonical URL of the page to share. (empty for current URL)</source>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.flattr" resname="flexforms_tab.flattr">
+			<trans-unit id="flexforms_tab.flattr" resname="flexforms_tab.flattr" translate="no">
 				<source>Flattr</source>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.mail" resname="flexforms_tab.mail">
+			<trans-unit id="flexforms_tab.mail" resname="flexforms_tab.mail" translate="no">
 				<source>Mail</source>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.pinterest" resname="flexforms_tab.pinterest">
+			<trans-unit id="flexforms_tab.pinterest" resname="flexforms_tab.pinterest" translate="no">
 				<source>Pinterest</source>
 			</trans-unit>
 			<trans-unit id="flexforms_tab.services" resname="flexforms_tab.services">
@@ -145,7 +145,7 @@
 			<trans-unit id="flexforms_tab.sharing" resname="flexforms_tab.sharing">
 				<source>Sharing</source>
 			</trans-unit>
-			<trans-unit id="flexforms_tab.twitter" resname="flexforms_tab.twitter">
+			<trans-unit id="flexforms_tab.twitter" resname="flexforms_tab.twitter" translate="no">
 				<source>Twitter</source>
 			</trans-unit>
 			<trans-unit id="plugin_title" resname="plugin_title">
