@@ -7,3 +7,6 @@
 *.woff2 binary
 *.eot binary
 *.otf binary
+
+/.gitattributes export-ignore
+/.crowdin.yaml export-ignore
