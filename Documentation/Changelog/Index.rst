@@ -4,6 +4,13 @@
 Change Log
 ==========
 
+Version 12.3.0
+--------------
+
+* Updated shariff-backend to version 8.2.2
+* Added crowdin support
+
+
 Version 12.2.0
 --------------
 
