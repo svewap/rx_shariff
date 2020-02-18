@@ -1,4 +1,4 @@
-<INCLUDE_TYPOSCRIPT: source="EXT:rx_shariff/Configuration/TypoScript/PluginOnly/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="EXT:rx_shariff/Configuration/TypoScript/PluginOnly/setup.typoscript">
 
 # ================================================
 # Load jQuery and Shariff files incl. font-awesome
