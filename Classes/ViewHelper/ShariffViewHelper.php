@@ -13,9 +13,8 @@
 namespace Reelworx\RxShariff\ViewHelper;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
 /**
@@ -25,29 +24,6 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
  */
 class ShariffViewHelper extends AbstractTagBasedViewHelper
 {
-
-    /**
-     * @throws \TYPO3\CMS\Fluid\Core\ViewHelper\Exception
-     */
-    public function __construct()
-    {
-        parent::__construct();
-
-        if (VersionNumberUtility::convertVersionNumberToInteger(TYPO3_branch) < VersionNumberUtility::convertVersionNumberToInteger('7.1')) {
-            $this->registerArgument(
-                'data',
-                'array',
-                'Additional data-* attributes. They will each be added with a "data-" prefix.',
-                false
-            );
-        }
-    }
-
-    /**
-     * Initialize arguments.
-     *
-     * @return void
-     */
     public function initializeArguments()
     {
         parent::initializeArguments();
@@ -56,25 +32,6 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         $this->registerArgument('enableBackend', 'boolean', 'Enable the Shariff Backend module and show stats', false, false);
     }
 
-    /**
-     * Add data attribute handling for CMS 6.2
-     */
-    public function initialize()
-    {
-        parent::initialize();
-
-        if (VersionNumberUtility::convertVersionNumberToInteger(TYPO3_branch) < VersionNumberUtility::convertVersionNumberToInteger('7.1')
-            && $this->hasArgument('data') && is_array($this->arguments['data'])
-        ) {
-            foreach ($this->arguments['data'] as $dataAttributeKey => $dataAttributeValue) {
-                $this->tag->addAttribute('data-' . $dataAttributeKey, $dataAttributeValue);
-            }
-        }
-    }
-
-    /**
-     * @return string
-     */
     public function render()
     {
         if ($this->arguments['enableBackend']) {
@@ -85,8 +42,7 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
                 $controllerContext = $this->renderingContext->getControllerContext();
             }
             if ($controllerContext) {
-                $url = $controllerContext->getUriBuilder()->reset()->setUseCacheHash(false)
-                                         ->setArguments(['eID' => 'shariff'])->buildFrontendUri();
+                $url = $controllerContext->getUriBuilder()->reset()->setArguments(['eID' => 'shariff'])->buildFrontendUri();
                 $this->tag->addAttribute('data-backend-url', $url);
             }
         }
@@ -99,10 +55,19 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
             );
         }
 
-        /** @var TypoScriptFrontendController $tsfe */
-        $tsfe = $GLOBALS['TSFE'];
-        if (!$this->tag->hasAttribute('data-lang') && !empty($tsfe->sys_language_isocode)) {
-            $this->tag->addAttribute('data-lang', $tsfe->sys_language_isocode);
+        $sys_language_isocode = 0;
+        if (class_exists(\TYPO3\CMS\Core\Site\Entity\SiteLanguage::class)) {
+            /** @var \TYPO3\CMS\Core\Site\Entity\SiteLanguage $language */
+            $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
+            $sys_language_isocode = $language->getTwoLetterIsoCode();
+        } else {
+            /** @var TypoScriptFrontendController $tsfe */
+            $tsfe = $GLOBALS['TSFE'];
+            $sys_language_isocode = $tsfe->sys_language_isocode;
+        }
+
+        if (!$this->tag->hasAttribute('data-lang') && !empty($sys_language_isocode)) {
+            $this->tag->addAttribute('data-lang', $sys_language_isocode);
         }
 
         $this->tag->addAttribute('class', 'shariff');

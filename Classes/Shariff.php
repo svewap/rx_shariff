@@ -12,6 +12,7 @@
 
 namespace Reelworx\RxShariff;
 
+use GuzzleHttp\HandlerStack;
 use Heise\Shariff\Backend;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Http\Response;
@@ -54,15 +55,7 @@ class Shariff
      */
     protected function render($url)
     {
-        $extensionConfiguration = [
-            'services' => 'Facebook, LinkedIn, Reddit, StumbleUpon, Flattr, Pinterest, Xing, AddThis, Vk',
-            'facebook_app_id' => '',
-            'facebook_secret' => '',
-        ];
-        $userExtensionConfiguration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rx_shariff']);
-        if (is_array($userExtensionConfiguration)) {
-            $extensionConfiguration = array_replace($extensionConfiguration, $userExtensionConfiguration);
-        }
+        $extensionConfiguration = $this->getExtensionConfiguration();
 
         $serviceArray = GeneralUtility::trimExplode(',', $extensionConfiguration['services']);
         // filter Twitter, which has been removed
@@ -80,7 +73,7 @@ class Shariff
             $allowedDomains = GeneralUtility::trimExplode(',', $extensionConfiguration['allowedDomains'], true);
         }
 
-        $configuration = [
+        $shariffConfiguration = [
             'services' => $serviceArray,
             'domains' => $allowedDomains,
             'cacheClass' => Cache::class,
@@ -88,26 +81,55 @@ class Shariff
                 'ttl' => (int)$extensionConfiguration['ttl'],
             ],
         ];
-        if ($GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_host']) {
-            $configuration['client']['proxy'] = 'tcp://' . $GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_host'];
-            if ($GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_port']) {
-               $configuration['client']['proxy'] .= ':' . $GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy_port'];
+
+        $httpOptions = $GLOBALS['TYPO3_CONF_VARS']['HTTP'];
+        $httpOptions['verify'] = filter_var($httpOptions['verify'], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ?? $httpOptions['verify'];
+
+        if (isset($GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler']) && is_array($GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler'])) {
+            $stack = HandlerStack::create();
+            foreach ($GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler'] ?? [] as $handler) {
+                $stack->push($handler);
             }
+            $httpOptions['handler'] = $stack;
         }
-        $facebookKey = array_search('Facebook', $configuration['services'], true);
+        $shariffConfiguration['client'] = $httpOptions;
+
+        $facebookKey = array_search('Facebook', $shariffConfiguration['services'], true);
         if ($facebookKey !== false) {
             if (empty($extensionConfiguration['facebook_app_id']) || empty($extensionConfiguration['facebook_secret'])) {
-                unset($configuration['services'][$facebookKey]);
+                unset($shariffConfiguration['services'][$facebookKey]);
             } else {
-                $configuration['Facebook'] = [
+                $shariffConfiguration['Facebook'] = [
                     'app_id' => $extensionConfiguration['facebook_app_id'],
                     'secret' => $extensionConfiguration['facebook_secret'],
                 ];
             }
         }
 
-        $shariff = new Backend($configuration);
+        $shariff = new Backend($shariffConfiguration);
         $shariff->setLogger(GeneralUtility::makeInstance(LogManager::class)->getLogger(__CLASS__));
         return $shariff->get($url);
+    }
+
+    private function getExtensionConfiguration(): array
+    {
+        $extensionConfiguration = [
+            'services' => 'Facebook, LinkedIn, Reddit, StumbleUpon, Flattr, Pinterest, Xing, AddThis, Vk',
+            'facebook_app_id' => '',
+            'facebook_secret' => '',
+        ];
+
+        if (class_exists(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)) {
+            $userExtensionConfiguration = GeneralUtility::makeInstance(
+                \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+            )->get('rx_shariff');
+        } else {
+            $userExtensionConfiguration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rx_shariff']);
+        }
+
+        if (is_array($userExtensionConfiguration)) {
+            $extensionConfiguration = array_replace($extensionConfiguration, $userExtensionConfiguration);
+        }
+        return $extensionConfiguration;
     }
 }
