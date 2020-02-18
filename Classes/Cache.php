@@ -14,6 +14,7 @@ namespace Reelworx\RxShariff;
 
 use Heise\Shariff\CacheInterface;
 use TYPO3\CMS\Core\Cache\CacheManager;
+use TYPO3\CMS\Core\Cache\Exception\NoSuchCacheException;
 use TYPO3\CMS\Core\Cache\Frontend\VariableFrontend;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -30,6 +31,12 @@ class Cache implements CacheInterface
      */
     protected $cache;
 
+    /**
+     * Cache constructor.
+     *
+     * @param array $configuration
+     * @throws NoSuchCacheException
+     */
     public function __construct(array $configuration)
     {
         if (isset($configuration['ttl'])) {
