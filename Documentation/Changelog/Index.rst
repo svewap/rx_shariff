@@ -4,6 +4,15 @@
 Change Log
 ==========
 
+Version 13.0.0
+--------------
+
+* Added support for TYPO3 v10
+* Added PHP 7.4 support
+* Dropped support for TYPO3 v7
+* Removed a lot of now unneeded code
+
+
 Version 12.3.0
 --------------
 
