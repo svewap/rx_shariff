@@ -4,7 +4,7 @@
 Change Log
 ==========
 
-Version 13.1.0
+Version 13.0.1
 --------------
 
 * Updated shariff-backend to version 9.0.1
