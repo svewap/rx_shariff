@@ -59,8 +59,11 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         if (class_exists(\TYPO3\CMS\Core\Site\Entity\SiteLanguage::class)) {
             /** @var \TYPO3\CMS\Core\Site\Entity\SiteLanguage $language */
             $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
-            $sys_language_isocode = $language->getTwoLetterIsoCode();
-        } else {
+            if ($language instanceof \TYPO3\CMS\Core\Site\Entity\SiteLanguage) {
+                $sys_language_isocode = $language->getTwoLetterIsoCode();
+            }
+        }
+        if (!$sys_language_isocode) {
             /** @var TypoScriptFrontendController $tsfe */
             $tsfe = $GLOBALS['TSFE'];
             $sys_language_isocode = $tsfe->sys_language_isocode;
