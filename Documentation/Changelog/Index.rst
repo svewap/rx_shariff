@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 13.0.2
+--------------
+
+* Fixed language handling if no language is available
+
+
 Version 13.0.1
 --------------
 
