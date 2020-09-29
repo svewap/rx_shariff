@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 13.0.4
+--------------
+
+* jQuery inclusion fixed for TYPO3 9+
+
+
 Version 13.0.3
 --------------
 
