@@ -3,9 +3,22 @@
 # ================================================
 # Load jQuery and Shariff files incl. font-awesome
 # ================================================
-page.javascriptLibs.jQuery = 1
-page.javascriptLibs.jQuery.version = latest
-page.javascriptLibs.jQuery.source = local
+
+# =============================
+# TYPO3 version lower 9.5
+# =============================
+page.includeJSLibs {
+   jQuery = EXT:core/Resources/Public/JavaScript/Contrib/jquery/jquery-3.2.1.min.js
+}
+
+# =============================
+# TYPO3 version 9.5 and higher
+# =============================
+[compatVersion("9.5")]
+page.includeJSLibs {
+   jQuery = EXT:core/Resources/Public/JavaScript/Contrib/jquery/jquery.min.js
+}
+[end]
 
 page.includeJSFooter.tx_rxshariff_shariff = EXT:rx_shariff/Resources/Public/JavaScript/shariff.min.js
 page.includeCSS.tx_rxshariff_shariff = EXT:rx_shariff/Resources/Public/Css/shariff.complete.css
