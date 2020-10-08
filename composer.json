@@ -10,6 +10,11 @@
 			"homepage": "https://reelworx.at/"
 		}
 	],
+	"support": {
+		"docs": "https://docs.typo3.org/p/reelworx/rx-shariff/master/en-us/",
+		"source": "https://bitbucket.org/reelworx/rx_shariff/src",
+		"issues": "https://bitbucket.org/reelworx/rx_shariff/issues"
+	},
 	"replace": {
 		"typo3-ter/rx-shariff": "self.version"
 	},
