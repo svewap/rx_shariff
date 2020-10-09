@@ -12,6 +12,7 @@
 
 namespace Reelworx\RxShariff\ViewHelper;
 
+use Reelworx\RxShariff\Controller\ShariffController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
@@ -28,7 +29,7 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
     {
         parent::initializeArguments();
         $this->registerUniversalTagAttributes();
-        $this->registerArgument('services', 'string', 'Comma separated list of services', false);
+        $this->registerArgument('services', 'string', 'Comma separated list of services', false, '');
         $this->registerArgument('enableBackend', 'boolean', 'Enable the Shariff Backend module and show stats', false, false);
     }
 
@@ -48,12 +49,15 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         }
 
         $services = $this->arguments['services'];
-        if ($services !== null) {
-            $this->tag->addAttribute(
-                'data-services',
-                '["' . implode('","', GeneralUtility::trimExplode(',', $services)) . '"]'
-            );
+        if (!$services) {
+            $services = ShariffController::SERVICE_LIST;
+        } else {
+            $services = GeneralUtility::trimExplode(',', $services);
         }
+        $this->tag->addAttribute(
+            'data-services',
+            '["' . implode('","', $services) . '"]'
+        );
 
         $sys_language_isocode = 0;
         if (class_exists(\TYPO3\CMS\Core\Site\Entity\SiteLanguage::class)) {

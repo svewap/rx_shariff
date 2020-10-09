@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 13.1.0
+--------------
+
+* ViewHelper displays all services if none is defined via arguments
+
+
 Version 13.0.4
 --------------
 

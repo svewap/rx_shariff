@@ -21,6 +21,29 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
  */
 class ShariffController extends ActionController
 {
+    public const SERVICE_LIST = [
+        'twitter',
+        'facebook',
+        'linkedin',
+        'xing',
+        'pinterest',
+        'whatsapp',
+        'mail',
+        'addthis',
+        'tumblr',
+        'flattr',
+        'diaspora',
+        'reddit',
+        'stumbleupon',
+        'threema',
+        'vk',
+        'telegram',
+        'qzone',
+        'tencent-weibo',
+        'weibo',
+        'print',
+        'info',
+    ];
 
     /**
      * Render content element
