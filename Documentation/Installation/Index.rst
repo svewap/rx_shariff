@@ -98,6 +98,18 @@ Simply copy the content of :ts:`plugin.rx_shariff.data-backend-url`:
    lib.shariffBackendUrl < plugin.rx_shariff.data-backend-url
 
 
+Pure Fluid
+^^^^^^^^^^
+
+Since TYPO3 10 LTS (or by using the `assets collector extension<https://extensions.typo3.org/extension/assetcollector/>`_) shariff can also be included using Fluid solely.
+
+.. code-block:: html
+
+   <f:asset.css identifier="shariff-css" href="EXT:rx_shariff/Resources/Public/Css/shariff.min.css" />
+   <f:asset.script identifier="shariff-css" src="EXT:rx_shariff/Resources/Public/JavaScript/shariff.min.js" />
+   <rx:shariff services="facebook,twitter" />
+
+
 Nice to know
 ------------
 
