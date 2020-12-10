@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 13.1.1
+--------------
+
+* Updated composer.json to include extension key
+
+
 Version 13.1.0
 --------------
 
