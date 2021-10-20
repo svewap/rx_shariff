@@ -4,6 +4,15 @@
 Change Log
 ==========
 
+Version 14.0.0
+--------------
+
+* Dropped TYPO3 v8 and v9 support
+* Allowed installation in v11 (alpha-testing)
+* Removed global :ts:`plugin.rx_shariff.data-backend-url`
+* Introduced dedicated log file by default (infix "shariff")
+
+
 Version 13.1.1
 --------------
 
