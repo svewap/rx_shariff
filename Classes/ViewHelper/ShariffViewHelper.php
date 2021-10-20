@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /*
  *
  * This file is part of the rx_shariff Extension for TYPO3 CMS.
@@ -13,10 +15,10 @@
 namespace Reelworx\RxShariff\ViewHelper;
 
 use Reelworx\RxShariff\Controller\ShariffController;
+use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
-use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
 /**
  * Class ShariffViewHelper
@@ -60,17 +62,10 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         );
 
         $sys_language_isocode = 0;
-        if (class_exists(\TYPO3\CMS\Core\Site\Entity\SiteLanguage::class)) {
-            /** @var \TYPO3\CMS\Core\Site\Entity\SiteLanguage $language */
-            $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
-            if ($language instanceof \TYPO3\CMS\Core\Site\Entity\SiteLanguage) {
-                $sys_language_isocode = $language->getTwoLetterIsoCode();
-            }
-        }
-        if (!$sys_language_isocode) {
-            /** @var TypoScriptFrontendController $tsfe */
-            $tsfe = $GLOBALS['TSFE'];
-            $sys_language_isocode = $tsfe->sys_language_isocode;
+        /** @var SiteLanguage $language */
+        $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
+        if ($language instanceof SiteLanguage) {
+            $sys_language_isocode = $language->getTwoLetterIsoCode();
         }
 
         if (!$this->tag->hasAttribute('data-lang') && !empty($sys_language_isocode)) {

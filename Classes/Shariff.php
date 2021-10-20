@@ -15,6 +15,8 @@ namespace Reelworx\RxShariff;
 use GuzzleHttp\HandlerStack;
 use Heise\Shariff\Backend;
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Http\JsonResponse;
 use TYPO3\CMS\Core\Http\Response;
 use TYPO3\CMS\Core\Log\LogManager;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -30,21 +32,12 @@ class Shariff
      * Process request
      *
      * @param ServerRequestInterface $request
-     * @param Response $response
      * @return null|Response
      */
-    public function processRequest(ServerRequestInterface $request, Response $response = null)
+    public function processRequest(ServerRequestInterface $request): ?Response
     {
-        $url = !empty($request->getQueryParams()['url'])
-            ? $request->getQueryParams()['url']
-            : (string)$_SERVER['HTTP_REFERER'];
-
-        if (!$response) {
-            $response = GeneralUtility::makeInstance(Response::class);
-        }
-        $response = $response->withHeader('Content-type', 'application/json');
-        $response->getBody()->write(json_encode($this->render($url)));
-        return $response;
+        $url = $request->getQueryParams()['url'] ?? (string)$_SERVER['HTTP_REFERER'];
+        return GeneralUtility::makeInstance(JsonResponse::class, $this->render($url));
     }
 
     /**
@@ -53,7 +46,7 @@ class Shariff
      * @param string $url URL for which stats should be queried
      * @return array Array of results
      */
-    protected function render($url)
+    protected function render(string $url): array
     {
         $extensionConfiguration = $this->getExtensionConfiguration();
 
@@ -119,14 +112,7 @@ class Shariff
             'facebook_secret' => '',
         ];
 
-        if (class_exists(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)) {
-            $userExtensionConfiguration = GeneralUtility::makeInstance(
-                \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
-            )->get('rx_shariff');
-        } else {
-            $userExtensionConfiguration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rx_shariff']);
-        }
-
+        $userExtensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('rx_shariff');
         if (is_array($userExtensionConfiguration)) {
             $extensionConfiguration = array_replace($extensionConfiguration, $userExtensionConfiguration);
         }

@@ -52,7 +52,7 @@ class Cache implements CacheInterface
      * @param string $content
      * @return void
      */
-    public function setItem($key, $content)
+    public function setItem($key, $content): void
     {
         $this->cache->set($key, $content, [], $this->ttl);
     }
@@ -63,7 +63,7 @@ class Cache implements CacheInterface
      * @param string $key
      * @return string
      */
-    public function getItem($key)
+    public function getItem($key): string
     {
         return (string)$this->cache->get($key);
     }
@@ -74,7 +74,7 @@ class Cache implements CacheInterface
      * @param string $key
      * @return bool
      */
-    public function hasItem($key)
+    public function hasItem($key): bool
     {
         return $this->cache->has($key);
     }
