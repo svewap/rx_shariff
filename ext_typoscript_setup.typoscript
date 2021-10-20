@@ -1,8 +1,0 @@
-plugin.rx_shariff {
-	data-backend-url = TEXT
-	data-backend-url.stdWrap.typolink {
-		parameter = #
-		additionalParams = &eID=shariff
-		returnLast = url
-	}
-}

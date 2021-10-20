@@ -91,11 +91,15 @@ The plugin can also be rendered via TypoScript the usual way. All settings are a
 The various settings are listed below.
 
 If you need maximum flexibility in your integration, there is also a way to retrieve the backend module (eID script) URL via TypoScript.
-Simply copy the content of :ts:`plugin.rx_shariff.data-backend-url`:
 
 .. code-block:: typoscript
 
-   lib.shariffBackendUrl < plugin.rx_shariff.data-backend-url
+   data-backend-url = TEXT
+   data-backend-url.stdWrap.typolink {
+     parameter = #
+     additionalParams = &eID=shariff
+     returnLast = url
+   }
 
 
 Pure Fluid
