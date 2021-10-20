@@ -30,6 +30,9 @@
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "rx_shariff"
+		},
+		"branch-alias": {
+			"dev-master": "v14.x-dev"
 		}
 	}
 }
