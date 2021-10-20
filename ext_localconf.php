@@ -20,3 +20,13 @@ if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][
     ['Shariff' => 'index'],
     []
 );
+
+if (!isset($GLOBALS['TYPO3_CONF_VARS']['LOG']['Reelworx']['RxShariff'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['LOG']['Reelworx']['RxShariff']['writerConfiguration'] = [
+        \TYPO3\CMS\Core\Log\LogLevel::WARNING => [
+            \TYPO3\CMS\Core\Log\Writer\FileWriter::class => [
+                'logFileInfix' => 'shariff',
+            ],
+        ],
+    ];
+}
