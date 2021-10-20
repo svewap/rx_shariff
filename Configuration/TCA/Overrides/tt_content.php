@@ -1,7 +1,7 @@
 <?php
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-    'Reelworx.RxShariff',
+    'RxShariff',
     'Shariff',
     'LLL:EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf:plugin_title',
     'EXT:rx_shariff/Resources/Public/Icons/plugin.png'

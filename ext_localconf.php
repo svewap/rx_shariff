@@ -15,7 +15,7 @@ if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Reelworx.RxShariff',
+    'RxShariff',
     'Shariff',
     ['Shariff' => 'index'],
     []
