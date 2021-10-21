@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 14.0.1
+--------------
+
+* Fixed documentation version number
+
+
 Version 14.0.0
 --------------
 
