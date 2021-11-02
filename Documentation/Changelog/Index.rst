@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 14.0.2
+--------------
+
+* Fixed plugin registration
+
+
 Version 14.0.1
 --------------
 
