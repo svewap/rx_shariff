@@ -17,7 +17,7 @@ if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'RxShariff',
     'Shariff',
-    ['Shariff' => 'index'],
+    [\Reelworx\RxShariff\Controller\ShariffController::class => 'index'],
     []
 );
 
