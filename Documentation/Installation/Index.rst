@@ -109,9 +109,11 @@ Since TYPO3 10 LTS (or by using the `assets collector extension<https://extensio
 
 .. code-block:: html
 
-   <f:asset.css identifier="shariff-css" href="EXT:rx_shariff/Resources/Public/Css/shariff.min.css" />
-   <f:asset.script identifier="shariff-css" src="EXT:rx_shariff/Resources/Public/JavaScript/shariff.min.js" />
-   <rx:shariff services="facebook,twitter" />
+   <html xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper">
+       <f:asset.css identifier="shariff-css" href="EXT:rx_shariff/Resources/Public/Css/shariff.min.css" />
+       <f:asset.script identifier="shariff-js" src="EXT:rx_shariff/Resources/Public/JavaScript/shariff.min.js" />
+       <rx:shariff services="facebook,twitter" />
+   </html>
 
 
 Nice to know
