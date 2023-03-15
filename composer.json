@@ -11,15 +11,13 @@
 		}
 	],
 	"support": {
-		"docs": "https://docs.typo3.org/p/reelworx/rx-shariff/master/en-us/",
+		"docs": "https://docs.typo3.org/p/reelworx/rx-shariff/main/en-us/",
 		"source": "https://bitbucket.org/reelworx/rx_shariff/src",
 		"issues": "https://bitbucket.org/reelworx/rx_shariff/issues"
 	},
-	"replace": {
-		"typo3-ter/rx-shariff": "self.version"
-	},
 	"require": {
-		"typo3/cms-core": "^10.4 | ^11.5"
+		"php": ">=8.0 <8.3",
+		"typo3/cms-core": "^11.5 | ^12.2"
 	},
 	"autoload": {
 		"psr-4": {
@@ -32,7 +30,7 @@
 			"extension-key": "rx_shariff"
 		},
 		"branch-alias": {
-			"dev-master": "v14.x-dev"
+			"dev-master": "v15.x-dev"
 		}
 	}
 }

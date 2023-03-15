@@ -17,7 +17,7 @@ namespace Reelworx\RxShariff\ViewHelper;
 use Reelworx\RxShariff\Controller\ShariffController;
 use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
+use TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
@@ -38,16 +38,9 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
     public function render()
     {
         if ($this->arguments['enableBackend']) {
-            $controllerContext = null;
-            if (isset($this->controllerContext)) {
-                $controllerContext = $this->controllerContext;
-            } elseif ($this->renderingContext instanceof RenderingContext) {
-                $controllerContext = $this->renderingContext->getControllerContext();
-            }
-            if ($controllerContext) {
-                $url = $controllerContext->getUriBuilder()->reset()->setArguments(['eID' => 'shariff'])->buildFrontendUri();
-                $this->tag->addAttribute('data-backend-url', $url);
-            }
+            $uriBuilder = GeneralUtility::makeInstance(UriBuilder::class);
+            $url = $uriBuilder->reset()->setArguments(['eID' => 'shariff'])->buildFrontendUri();
+            $this->tag->addAttribute('data-backend-url', $url);
         }
 
         $services = $this->arguments['services'];
@@ -65,7 +58,13 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         /** @var SiteLanguage $language */
         $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
         if ($language instanceof SiteLanguage) {
-            $sys_language_isocode = $language->getTwoLetterIsoCode();
+            if (is_string($language->getLocale())) {
+                // v11
+                $sys_language_isocode = $language->getTwoLetterIsoCode();
+            } else {
+                // v12
+                $sys_language_isocode = $language->getLocale()->getLanguageCode();
+            }
         }
 
         if (!$this->tag->hasAttribute('data-lang') && !empty($sys_language_isocode)) {

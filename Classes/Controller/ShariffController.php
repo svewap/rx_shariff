@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 namespace Reelworx\RxShariff\Controller;
 
+use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -54,9 +55,9 @@ class ShariffController extends ActionController
      * based on the TypoScript settings and overwritten by
      * the settings from FlexForms.
      *
-     * @return void
+     * @return ResponseInterface
      */
-    public function indexAction()
+    public function indexAction(): ResponseInterface
     {
         $data = $this->settings['data'];
         unset($data['services']);
@@ -72,5 +73,6 @@ class ShariffController extends ActionController
         $this->view->assign('data', $data);
         $this->view->assign('enableBackend', $this->settings['enableBackend']);
         $this->view->assign('services', $this->settings['data']['services']);
+        return $this->htmlResponse();
     }
 }

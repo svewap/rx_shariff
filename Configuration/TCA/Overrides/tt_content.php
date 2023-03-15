@@ -7,7 +7,7 @@
     'EXT:rx_shariff/Resources/Public/Icons/plugin.png'
 );
 
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['rxshariff_shariff'] = 'recursive,select_key,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['rxshariff_shariff'] = 'recursive,pages';
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['rxshariff_shariff'] = 'pi_flexform';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     'rxshariff_shariff',

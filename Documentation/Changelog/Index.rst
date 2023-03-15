@@ -4,6 +4,13 @@
 Change Log
 ==========
 
+Version 15.0.0
+--------------
+
+* Dropped TYPO3 v10 support
+* Added TYPO3 v12 support
+
+
 Version 14.0.2
 --------------
 

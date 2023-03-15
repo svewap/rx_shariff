@@ -17,13 +17,12 @@ if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'RxShariff',
     'Shariff',
-    [\Reelworx\RxShariff\Controller\ShariffController::class => 'index'],
-    []
+    [\Reelworx\RxShariff\Controller\ShariffController::class => 'index']
 );
 
 if (!isset($GLOBALS['TYPO3_CONF_VARS']['LOG']['Reelworx']['RxShariff'])) {
     $GLOBALS['TYPO3_CONF_VARS']['LOG']['Reelworx']['RxShariff']['writerConfiguration'] = [
-        \TYPO3\CMS\Core\Log\LogLevel::WARNING => [
+        \Psr\Log\LogLevel::WARNING => [
             \TYPO3\CMS\Core\Log\Writer\FileWriter::class => [
                 'logFileInfix' => 'shariff',
             ],
