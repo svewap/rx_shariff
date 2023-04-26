@@ -83,7 +83,7 @@ class Shariff
 
         if (isset($GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler']) && is_array($GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler'])) {
             $stack = HandlerStack::create();
-            foreach ($GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler'] ?? [] as $handler) {
+            foreach ($GLOBALS['TYPO3_CONF_VARS']['HTTP']['handler'] as $handler) {
                 $stack->push($handler);
             }
             $httpOptions['handler'] = $stack;
