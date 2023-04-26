@@ -4,6 +4,18 @@
 Change Log
 ==========
 
+Version 15.0.3
+--------------
+
+* Correct version number in TER release
+
+
+Version 15.0.2
+--------------
+
+* Restored ext_emconf.php
+
+
 Version 15.0.1
 --------------
 
