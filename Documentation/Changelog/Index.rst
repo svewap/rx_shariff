@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.0.1
+--------------
+
+* Fixed TYPO3_MODE usage
+
+
 Version 15.0.0
 --------------
 

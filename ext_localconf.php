@@ -1,5 +1,4 @@
 <?php
-defined('TYPO3_MODE') || die();
 
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['shariff'] = \Reelworx\RxShariff\Shariff::class . '::processRequest';
 
