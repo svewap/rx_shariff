@@ -12,6 +12,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'Reelworx GmbH',
     'constraints' => [
         'depends' => [
+            'php' => '8.0.0-8.2.99',
             'typo3' => '11.5.0-12.4.99',
         ],
         'conflicts' => [],
