@@ -1,3 +1,10 @@
+![Total downloads](https://typo3-badges.dev/badge/rx_shariff/downloads/shields.svg)
+![TYPO3 extension](https://typo3-badges.dev/badge/rx_shariff/extension/shields.svg)
+![Stability](https://typo3-badges.dev/badge/rx_shariff/stability/shields.svg)
+![TYPO3 versions](https://typo3-badges.dev/badge/rx_shariff/typo3/shields.svg)
+![Latest version](https://typo3-badges.dev/badge/rx_shariff/version/shields.svg)
+<!-- Generated with 🧡 at typo3-badges.dev -->
+
 Shariff Extension
 =================
 

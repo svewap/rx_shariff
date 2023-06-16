@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.0.4
+--------------
+
+* Ship our own version of jQuery and do not rely on Core anymore
+
+
 Version 15.0.3
 --------------
 
