@@ -4,9 +4,7 @@
 # Load jQuery and Shariff files
 # =============================
 
-page.includeJSLibs {
-   jQuery = EXT:core/Resources/Public/JavaScript/Contrib/jquery/jquery.min.js
-}
+page.includeJSLibs.jQuery = EXT:rx_shariff/Resources/Public/JavaScript/jquery-3.7.0.min.js
 
 page.includeJSFooter.tx_rxshariff_shariff = EXT:rx_shariff/Resources/Public/JavaScript/shariff.min.js
 page.includeCSS.tx_rxshariff_shariff = EXT:rx_shariff/Resources/Public/Css/shariff.min.css
