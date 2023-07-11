@@ -22,6 +22,7 @@ use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Http\JsonResponse;
 use TYPO3\CMS\Core\Http\Response;
 use TYPO3\CMS\Core\Log\LogManager;
+use TYPO3\CMS\Core\Utility\DebugUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -104,7 +105,11 @@ class Shariff
 
         $shariff = new Backend($shariffConfiguration);
         $shariff->setLogger(GeneralUtility::makeInstance(LogManager::class)->getLogger(__CLASS__));
-        return $shariff->get($url);
+        $return = $shariff->get($url);
+        if (is_array($return)) {
+            return $return;
+        }
+        return [];
     }
 
     private function getExtensionConfiguration(): array

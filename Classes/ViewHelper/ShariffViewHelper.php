@@ -15,7 +15,10 @@ declare(strict_types=1);
 namespace Reelworx\RxShariff\ViewHelper;
 
 use Reelworx\RxShariff\Controller\ShariffController;
+use TYPO3\CMS\Core\Http\ServerRequest;
 use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
+use TYPO3\CMS\Core\Site\SiteFinder;
+use TYPO3\CMS\Core\Utility\DebugUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
@@ -35,11 +38,14 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         $this->registerArgument('enableBackend', 'boolean', 'Enable the Shariff Backend module and show stats', false, false);
     }
 
-    public function render()
+    public function render(): string
     {
         if ($this->arguments['enableBackend']) {
-            $uriBuilder = GeneralUtility::makeInstance(UriBuilder::class);
-            $url = $uriBuilder->reset()->setArguments(['eID' => 'shariff'])->buildFrontendUri();
+
+            $pageId = $GLOBALS['TYPO3_REQUEST']->getAttribute('site')->getRootPageId();
+            $site = GeneralUtility::makeInstance(SiteFinder::class)->getSiteByPageId($pageId);
+            $url = $site->getRouter()->generateUri($pageId, ['eID' => 'shariff'])->__toString();
+
             $this->tag->addAttribute('data-backend-url', $url);
         }
 

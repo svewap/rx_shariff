@@ -53,7 +53,7 @@ class Backend
     /**
      * @param string $url
      *
-     * @return array
+     * @return array|mixed|null
      */
     public function get($url)
     {
